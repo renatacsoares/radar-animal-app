@@ -1,9 +1,9 @@
-<ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
+<ion-view view-title="Mapa da Região">
+    <ion-content scroll="false">
+        <map on-create="mapCreated(map)"></map>
+      </ion-content>
+
+      <ion-footer-bar class="bar-stable">
+        <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate"></a>
+      </ion-footer-bar>
 </ion-view>

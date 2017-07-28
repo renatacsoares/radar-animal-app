@@ -1,0 +1,50 @@
+<ion-view title=" Lista dos Animais">
+  <ion-content padding="true" class="has-header">
+          <label class="item item-input">
+              <input type="search" placeholder="Pesquisar" ng-model="filtro">
+          </label>
+          <ion-list ng-repeat="animal in animais | filter:filtro">
+              <ion-item class="item-avatar">
+                  <img src="">
+                  <h2>Tipo:{{animal.tipo}}</h2>
+                  <h2>Descricao:{{animal.situacao}}</h2>
+                  <h2>Endereco:{{animal.endereco}}</h2>
+                  <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px;float:right" ng-click="animalSelecionado('{{animal._id}}')">Selecionar</button>
+                  <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px; float: right" ng-click="apagarAnimal('{{animal._id}}')">Excluir</button>
+              </ion-item>
+          </ion-list>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<ion-view view-title="Chats">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

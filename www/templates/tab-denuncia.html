@@ -1,0 +1,26 @@
+<ion-view view-title="Denunciar Animal">
+  <div class="bar bar header bar assertive">
+    <h1 class="title">Select></h1>
+  </div>
+
+  <br/><br /><br/>
+
+  <label class="item item-input item select">
+    <div class="input-label">Tipo do Animal:</div>
+    <select ng-model="animal.tipo">
+      <option>Gato</option>
+      <option>Cachorro</option>
+      <option>Outros</option>
+    </select>
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Descrição da Situação:</span>
+    <input type="text" ng-model="animal.situacao">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Endereço:</span>
+    <input type="text" ng-model="animal.endereco">
+  </label>
+  <button id="menu-button20" style="border-radius:14px 14px 14px 14px;" class="button button-energized button-large button-block button" ng-click="salvaDenuncia()">Denunciar</button>
+
+</ion-view>
