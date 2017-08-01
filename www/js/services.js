@@ -25,7 +25,7 @@ angular.module('RadarAnimal.services', [])
     },
     get: function(animalId) {
       for (var i = 0; i < animais.length; i++) {
-        if (animais[i].id === parseInt(animais)) {
+        if (animais[i].id === parseInt(animalId)) {
           return animais[i];
         }
       }

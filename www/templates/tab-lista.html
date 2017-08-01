@@ -9,8 +9,8 @@
                   <h2>Tipo:{{animal.tipo}}</h2>
                   <h2>Descricao:{{animal.situacao}}</h2>
                   <h2>Endereco:{{animal.endereco}}</h2>
-                  <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px;float:right" ng-click="animalSelecionado('{{animal._id}}')">Selecionar</button>
-                  <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px; float: right" ng-click="apagarAnimal('{{animal._id}}')">Excluir</button>
+                  <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px;float:right" ng-click="animalSelecionado('{{animal.id}}')">Selecionar</button>
+                  <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px; float: right" ng-click="apagarAnimal('{{animal.id}}')">Excluir</button>
               </ion-item>
           </ion-list>
 </ion-content>
