@@ -3,17 +3,17 @@
         <form id="fazenda-form2" class="list">
           <label class="item item-input" id=""
             <span class="input-label">Tipo/span>
-            <input type="text" placeholder="" ng-model= "animal.tipo">
+            <input type="text" placeholder="" ng-model= "animal.tipo" ng-required="true">
           </label>
           <label class="item item-input" id="">
             <span class="input-label">Situacao</span>
-            <input type="text" placeholder="" ng-model= "animal.situacao">
+            <input type="text" placeholder="" ng-model= "animal.situacao" ng-required="true">
           </label>
           <label class="item item-input" id="">
             <span class="input-label">Endereço</span>
-            <input type="text" placeholder="" ng-model= "animal.endereco">
+            <input type="text" placeholder="" ng-model= "animal.endereco" ng-required="true">
           </label>
-          <button id="menu-button20"class="button button-energized button-large button-block button" ng-click="voltaAnimail()">Voltar</button>
+          <button id="menu-button20"class="button button-energized button-large button-block button" ng-click="voltaAnimal()">Voltar</button>
           </form>
     </ion-content>
 </ion-view>

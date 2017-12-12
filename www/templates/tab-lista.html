@@ -1,16 +1,17 @@
-<ion-view title=" Lista dos Animais">
-  <ion-content padding="true" class="has-header">
+<ion-view title="Lista dos Animais">
+  <ion-content padding="" class="has-header content-tab-lista">
           <label class="item item-input">
+             <i class="icon ion-search placeholder-icon"></i>
               <input type="search" placeholder="Pesquisar" ng-model="filtro">
           </label>
           <ion-list ng-repeat="animal in animais | filter:filtro">
               <ion-item class="item-avatar">
-                  <img src="">
+                  <img src="img/cat-and-dog.png">
                   <h2>Tipo:{{animal.tipo}}</h2>
                   <h2>Descricao:{{animal.situacao}}</h2>
                   <h2>Endereco:{{animal.endereco}}</h2>
-                  <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px;float:right" ng-click="animalSelecionado('{{animal.id}}')">Selecionar</button>
-                  <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px; float: right" ng-click="apagarAnimal('{{animal.id}}')">Excluir</button>
+                  <button class="button button-positive botao-padrao" ng-click="animalSelecionado('{{animal._id}}')">Selecionar</button>
+                  <button class="button button-positive botao-padrao" ng-click="apagarAnimal('{{animal._id}}')">Excluir</button>
               </ion-item>
           </ion-list>
 </ion-content>

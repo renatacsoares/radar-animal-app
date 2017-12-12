@@ -1,1 +1,27 @@
 /* Empty. Add your own CSS if you like */
+
+.botao-padrao {
+  border-radius:10px 10px 10px 10px;
+  font-size: 16px;
+  float:right;
+  margin-right: 2px
+}
+
+.content-tab-lista {
+  background-color: black;
+}
+
+
+.card-background-page {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+  }
+
+.view-title{
+  text-decoration-color: black;
+}
+
+.item {
+    background-color: #FFF6E5;
+}

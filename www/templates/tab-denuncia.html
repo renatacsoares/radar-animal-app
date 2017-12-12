@@ -1,27 +1,29 @@
 <ion-view view-title="Denunciar Animal">
-  <div class="bar bar header bar assertive">
-    <h1 class="title">Select></h1>
-  </div>
-
-  <br/><br /><br/>
-
-  <label class="item item-input item select">
+  <ion-content class="card-background-page">
+    <ion-card>
+      <img src="img/cat-and-dog.png" />
+    </ion-card>
+    <br/><br /><br/>
+    <form name="cadastroAnimalForm" class="list" novalidate>
+      <label class="item item-input item select">
     <div class="input-label">Tipo do Animal:</div>
-    <select ng-model="animal.tipo">
+    <select ng-model="animal.tipo" required>
       <option>Gato</option>
       <option>Cachorro</option>
       <option>Outros</option>
     </select>
   </label>
-  <label class="item item-input">
+      <label class="item item-input">
     <span class="input-label">Descrição da Situação:</span>
-    <input type="text" ng-model="animal.situacao">
+    <input type="text" ng-model="animal.situacao" required>
   </label>
-  <label class="item item-input">
+      <label class="item item-input">
     <span class="input-label">Endereço:</span>
-    <input type="text" ng-model="animal.endereco">
+    <input type="text" ng-model="animal.endereco" required>
   </label>
-  <button id="menu-button20" style="border-radius:14px 14px 14px 14px;" class="button button-energized button-large button-block button" ng-click="pegaFoto()">Pega Foto</button>  
-  <button id="menu-button20" style="border-radius:14px 14px 14px 14px;" class="button button-energized button-large button-block button" ng-click="salvaDenuncia()">Denunciar</button>
+      <button id="menu-button20" class="button button-block button-small button-positive" ng-click="pegaFoto()">Foto</button>
+      <button id="menu-button20" class="button button-block button-small button-assertive" ng-disabled="cadastroAnimalForm.$invalid" ng-click="salvaDenuncia()">Denunciar</button>
+    </form>
 
+  </ion-content>
 </ion-view>

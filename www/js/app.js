@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('RadarAnimal', ['ionic', 'RadarAnimal.controllers', 'RadarAnimal.directives', 'RadarAnimal.services'])
+angular.module('RadarAnimal', ['ionic', 'ngCordova', 'RadarAnimal.controllers', 'RadarAnimal.directives', 'RadarAnimal.services'])
 
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -52,6 +52,7 @@ angular.module('RadarAnimal', ['ionic', 'RadarAnimal.controllers', 'RadarAnimal.
 
       .state('tab.lista', {
         url: '/lista',
+        params: { cache: null },
         views: {
           'tab-lista': {
             templateUrl: 'templates/tab-lista.html',
@@ -61,7 +62,7 @@ angular.module('RadarAnimal', ['ionic', 'RadarAnimal.controllers', 'RadarAnimal.
         }
       })
       .state('tab.animal', {
-        url: '/animal/:animalId',
+        url: '/animal/:id',
         views: {
           'tab-lista': {
             templateUrl: 'templates/tab-animal.html',
